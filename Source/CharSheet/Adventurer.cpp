@@ -27,8 +27,25 @@ void UAdventurer::BeginPlay()
 // Called every frame
 void UAdventurer::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);	
 }
 
+void UAdventurer::SetAdventurerName(FString NewName)
+{
+	Name = NewName;
+}
+
+void UAdventurer::SetAdventurerPronounHe(FString NewPronoun)
+{
+	PronounHe = NewPronoun;
+}
+
+void UAdventurer::SetAdventurerPronounHim(FString NewPronoun)
+{
+	PronounHim = NewPronoun;
+}
+
+void UAdventurer::SetAdventurerPronounHis(FString NewPronoun)
+{
+	PronounHis = NewPronoun;
+}

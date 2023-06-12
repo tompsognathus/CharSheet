@@ -24,12 +24,34 @@ public:
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
+	UFUNCTION(BlueprintCallable, Category="Adventurer")
+	void SetAdventurerName(FString NewName);
+
+	UFUNCTION(BlueprintCallable, Category = "Adventurer")
+		void SetAdventurerPronounHe(FString NewName);
+
+	UFUNCTION(BlueprintCallable, Category = "Adventurer")
+		void SetAdventurerPronounHim(FString NewName);
+
+	UFUNCTION(BlueprintCallable, Category = "Adventurer")
+		void SetAdventurerPronounHis(FString NewName);
+
 	UPROPERTY(BlueprintReadOnly)
 	int PointsRemaining = 27;
 
 private:
 	UPROPERTY(EditAnywhere)
 	FString Name = "";
+
+	UPROPERTY(EditAnywhere)
+	FString PronounHe = "";
+
+	UPROPERTY(EditAnywhere)
+	FString PronounHim = "";
+
+	UPROPERTY(EditAnywhere)
+	FString PronounHis = "";
+
 
 	UPROPERTY(EditAnywhere)
 	int Level = 1;
