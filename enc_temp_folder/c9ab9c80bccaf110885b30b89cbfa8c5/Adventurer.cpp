@@ -25,13 +25,6 @@ void UAdventurer::TickComponent(float DeltaTime, ELevelTick TickType, FActorComp
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);	
 }
 
-int UAdventurer::CalculateAbilityModifier(int AbilityScore)
-{
-	return (AbilityScore / 2) - 5;
-}
-
-
-
 void UAdventurer::SetAdventurerName(FString NewName)
 {
 	Name = NewName;

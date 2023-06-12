@@ -28,22 +28,18 @@ public:
 	void SetAdventurerName(FString NewName);
 
 	UFUNCTION(BlueprintCallable, Category = "Adventurer")
-	void SetAdventurerPronounHe(FString NewName);
+		void SetAdventurerPronounHe(FString NewName);
 
 	UFUNCTION(BlueprintCallable, Category = "Adventurer")
-	void SetAdventurerPronounHim(FString NewName);
+		void SetAdventurerPronounHim(FString NewName);
 
 	UFUNCTION(BlueprintCallable, Category = "Adventurer")
-	void SetAdventurerPronounHis(FString NewName);
+		void SetAdventurerPronounHis(FString NewName);
 
 	UPROPERTY(BlueprintReadOnly)
 	int PointsRemaining = 27;
 
 private:
-	int CalculateAbilityModifier(int AbilityScore);
-
-	int CalculatePointBuyValue(int AbilityScore);
-
 	UPROPERTY(EditAnywhere)
 	FString Name = "";
 
