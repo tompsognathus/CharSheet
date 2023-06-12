@@ -59,4 +59,20 @@ private:
 	UPROPERTY(EditAnywhere)
 	int Xp = 0;
 
+	// Ability Scores
+	int Str = 8;
+	int Dex = 8;
+	int Con = 8;
+	int Int = 8;
+	int Wis = 8;
+	int Cha = 8;
+
+	// Ability Modifiers
+	int StrMod = -1;
+	int DexMod = -1;
+	int ConMod = -1;
+	int IntMod = -1;
+	int WisMod = -1;
+	int ChaMod = -1;
+
 };
