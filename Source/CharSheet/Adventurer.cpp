@@ -22,15 +22,31 @@ void UAdventurer::BeginPlay()
 // Called every frame
 void UAdventurer::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);	
+	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 }
 
 int UAdventurer::CalculateAbilityModifier(int AbilityScore)
 {
-	return (AbilityScore / 2) - 5;
+	float AbilityModifier = (AbilityScore - 10) / 2.0f;
+	return FMath::FloorToInt(AbilityModifier);
 }
 
-
+int UAdventurer::CalculatePointBuyValue(int AbilityScore)
+{
+	if (AbilityScore >= 8 && AbilityScore <= 13)
+	{
+		return AbilityScore - 8;
+	}
+	else if (AbilityScore <= 15)
+	{
+		return (AbilityScore - 13) * 2 + 5;
+	}
+	else
+	{
+		UE_LOG(LogTemp, Error, TEXT("Invalid Ability Score for Point Buy!"));
+		return 27;
+	}
+}
 
 void UAdventurer::SetAdventurerName(FString NewName)
 {
