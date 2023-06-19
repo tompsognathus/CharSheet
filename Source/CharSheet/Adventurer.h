@@ -56,7 +56,6 @@ private:
 	UPROPERTY(EditAnywhere)
 	FString PronounHis = "";
 
-
 	UPROPERTY(EditAnywhere)
 	int Level = 1;
 
@@ -78,5 +77,6 @@ private:
 	int IntMod = -1;
 	int WisMod = -1;
 	int ChaMod = -1;
+
 
 };
