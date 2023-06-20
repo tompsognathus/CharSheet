@@ -36,6 +36,12 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Adventurer")
 	void SetAdventurerPronounHis(FString NewName);
 
+	UFUNCTION(BlueprintCallable, Category = "Adventurer")
+	void SetAdventurerRace(FString NewRace);
+
+	UFUNCTION(BlueprintCallable, Category = "Adventurer")
+	void SetAdventurerClass(FString NewClass);
+
 	UPROPERTY(BlueprintReadOnly)
 	int PointsRemaining = 27;
 
@@ -55,6 +61,13 @@ private:
 
 	UPROPERTY(EditAnywhere)
 	FString PronounHis = "";
+
+	UPROPERTY(EditAnywhere)
+	FString CharRace = "";
+
+	UPROPERTY(EditAnywhere)
+	FString CharClass = "";
+
 
 	UPROPERTY(EditAnywhere)
 	int Level = 1;

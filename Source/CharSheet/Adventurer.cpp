@@ -67,3 +67,13 @@ void UAdventurer::SetAdventurerPronounHis(FString NewPronoun)
 {
 	PronounHis = NewPronoun;
 }
+
+void UAdventurer::SetAdventurerClass(FString NewCharClass)
+{
+	CharClass = NewCharClass;
+}
+
+void UAdventurer::SetAdventurerRace(FString NewCharRace)
+{
+	CharRace = NewCharRace;
+}
