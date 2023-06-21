@@ -63,8 +63,6 @@ void UAdventurer::SetAdventurerAbilityScores(int NewStr, int NewDex, int NewCon,
 	Int = NewInt;
 	Wis = NewWis;
 	Cha = NewCha;
-
-	UpdateModifiers();
 }
 
 void UAdventurer::UpdateModifiers()
